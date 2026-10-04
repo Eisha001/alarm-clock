@@ -2,7 +2,7 @@
 
 A purple themed alarm clock built from scratch with HTML, CSS and JavaScript during my training at SQI College of ICT.
 
-**Live demo:** https://eisha001.github.io/alarm-clock/
+**Live demo:** 
 
 ## Features
 
@@ -24,15 +24,15 @@ A purple themed alarm clock built from scratch with HTML, CSS and JavaScript dur
 ## How to run
 
 1. Download or clone the repo:
-```bash
+bash
    git clone https://github.com/Eisha001/alarm-clock.git
-```
+
 2. Open `index.html` in your browser.
 3. Enter a time, choose a ringtone, and press Create.
 
 ## How it works
 
-- One `setInterval` runs every second. It updates the clock and checks whether any alarm is due.
+- One setInterval runs every second. It updates the clock and checks whether any alarm is due.
 - Each alarm stores its target time in milliseconds, so checking is a single comparison.
 - Alarms are saved with `JSON.stringify` and read back with `JSON.parse` through `localStorage`.
 
