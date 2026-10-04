@@ -2,7 +2,7 @@
 
 A purple themed alarm clock built from scratch with HTML, CSS and JavaScript during my training at SQI College of ICT.
 
-**Live demo:** 
+**Live demo:** https://alarm-clock0.netlify.app/
 
 ## Features
 
