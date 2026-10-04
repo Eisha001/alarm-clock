@@ -1,0 +1,188 @@
+:root {
+    --borahae-deep: #3E1E68;
+    --borahae-mid: #6C4AB6;
+    --borahae-light: #B983FF;
+    --borahae-pale: #E6D9FF;
+    --borahae-glow: #C9A6FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px 16px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at top, var(--borahae-mid) 0%, var(--borahae-deep) 65%, #1B0E33 100%);
+    color: var(--borahae-pale);
+}
+
+#clock {
+    height: auto !important;
+    font-size: 3.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 18px var(--borahae-glow), 0 0 36px rgba(185, 131, 255, 0.5);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(201, 166, 255, 0.35);
+    border-radius: 20px;
+    padding: 28px 32px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px rgba(62, 30, 104, 0.55);
+    width: 100%;
+    max-width: 420px;
+}
+
+.inputs {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+input[type="number"] {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--borahae-light);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--borahae-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 0 3px var(--borahae-glow);
+    transform: translateY(-1px);
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+button {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    letter-spacing: 0.5px;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#create {
+    background: linear-gradient(135deg, var(--borahae-light), var(--borahae-mid));
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(185, 131, 255, 0.45);
+}
+
+#create:hover {
+    box-shadow: 0 8px 22px rgba(185, 131, 255, 0.65);
+}
+
+#stop {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--borahae-pale);
+    border: 1px solid var(--borahae-light);
+}
+
+#stop:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#activeAlarmsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.alarm-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(201, 166, 255, 0.3);
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(62, 30, 104, 0.4);
+}
+
+.alarm-card button {
+    flex: none;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--borahae-pale);
+    border-radius: 10px;
+}
+
+.alarm-card button:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+select {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--borahae-light);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--borahae-deep);
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}
+
+select:focus {
+    box-shadow: 0 0 0 3px var(--borahae-glow);
+}
+
+#error {
+    margin: 0;
+    min-height: 1.2em;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffb3c7;
+}
+
+.alarm-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.alarm-info small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--borahae-glow);
+}
